@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.btatras = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btIR = new System.Windows.Forms.Button();
-            this.btFavs = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btFavs = new System.Windows.Forms.Button();
+            this.btIR = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btatras = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,38 +51,14 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
-            // webBrowser1
+            // comboBox1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(1, 55);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(796, 386);
-            this.webBrowser1.TabIndex = 1;
-            // 
-            // btatras
-            // 
-            this.btatras.Location = new System.Drawing.Point(8, 17);
-            this.btatras.Name = "btatras";
-            this.btatras.Size = new System.Drawing.Size(55, 21);
-            this.btatras.TabIndex = 0;
-            this.btatras.Text = "Atras";
-            this.btatras.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(75, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // btIR
-            // 
-            this.btIR.Location = new System.Drawing.Point(537, 18);
-            this.btIR.Name = "btIR";
-            this.btIR.Size = new System.Drawing.Size(75, 20);
-            this.btIR.TabIndex = 2;
-            this.btIR.Text = "Ir";
-            this.btIR.UseVisualStyleBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(671, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(124, 21);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // btFavs
             // 
@@ -92,20 +68,50 @@
             this.btFavs.TabIndex = 3;
             this.btFavs.Text = "Agregar Favoritos";
             this.btFavs.UseVisualStyleBackColor = true;
+            this.btFavs.Click += new System.EventHandler(this.BtFavs_Click);
             // 
-            // comboBox1
+            // btIR
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(671, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 21);
-            this.comboBox1.TabIndex = 4;
+            this.btIR.Location = new System.Drawing.Point(537, 18);
+            this.btIR.Name = "btIR";
+            this.btIR.Size = new System.Drawing.Size(75, 20);
+            this.btIR.TabIndex = 2;
+            this.btIR.Text = "Ir";
+            this.btIR.UseVisualStyleBackColor = true;
+            this.btIR.Click += new System.EventHandler(this.BtIR_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(75, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(456, 20);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox1_KeyDown);
+            // 
+            // btatras
+            // 
+            this.btatras.Location = new System.Drawing.Point(8, 17);
+            this.btatras.Name = "btatras";
+            this.btatras.Size = new System.Drawing.Size(55, 21);
+            this.btatras.TabIndex = 0;
+            this.btatras.Text = "Atras";
+            this.btatras.UseVisualStyleBackColor = true;
+            this.btatras.Click += new System.EventHandler(this.Btatras_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(1, 55);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(796, 386);
+            this.webBrowser1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(797, 442);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
